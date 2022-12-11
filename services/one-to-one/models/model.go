@@ -12,6 +12,4 @@ type Student struct {
 	UpdatedAt time.Time      `gorm:"autoUpdateTime:milli" json:"updated_at"`
 	DeletedAt gorm.DeletedAt `gorm:"index" json:"deleted_at"`
 	Name      string         `json:"name" gorm:"index:idx_name,unique"`
-	Colour    string         `json:"colour"`
-	Icon      string         `json:"icon"`
 }

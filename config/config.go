@@ -2,7 +2,7 @@ package config
 
 import (
 	"os"
-	student "relationship/services/one-to-one"
+	student "relationship/services/one-to-one/models"
 
 	env "github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
@@ -11,7 +11,7 @@ import (
 
 var DB *gorm.DB
 
-func connection() {
+func Connection() {
 	err := env.Load(".env")
 	if err != nil {
 		panic(err)
