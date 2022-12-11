@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 	student "relationship/services/belongs-to/models"
+	card "relationship/services/one-to-one/models"
 
 	// a "relationship/services/one-to-many/models"
 
@@ -36,9 +37,13 @@ func Connection() {
 		panic(err)
 	}
 
+	//belongs to relationship
 	db.AutoMigrate(&student.User{})
 	db.AutoMigrate(&student.Company{})
 
-	db.AutoMigrate()
+	//one to one relationship
+	db.AutoMigrate(&card.CreditCard{})
+	db.AutoMigrate(&card.Customer{})
+
 	DB = db
 }
