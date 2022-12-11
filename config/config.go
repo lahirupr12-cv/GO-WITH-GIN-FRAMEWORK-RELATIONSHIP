@@ -34,6 +34,7 @@ func Connection() {
 		panic(err)
 	}
 
-	db.AutoMigrate(&student.Student{})
+	db.AutoMigrate(&student.User{})
+	db.AutoMigrate(&student.Company{})
 	DB = db
 }

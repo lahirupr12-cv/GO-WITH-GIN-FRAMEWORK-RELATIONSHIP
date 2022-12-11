@@ -10,6 +10,6 @@ func main() {
 
 	fmt.Println("hello")
 	config.Connection()
-	student.CreateStudent()
+	student.CreateData()
 
 }
