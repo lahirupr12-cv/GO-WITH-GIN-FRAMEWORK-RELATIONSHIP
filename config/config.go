@@ -2,7 +2,9 @@ package config
 
 import (
 	"os"
-	student "relationship/services/one-to-one/models"
+	student "relationship/services/belongs-to/models"
+
+	// a "relationship/services/one-to-many/models"
 
 	env "github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
@@ -36,5 +38,7 @@ func Connection() {
 
 	db.AutoMigrate(&student.User{})
 	db.AutoMigrate(&student.Company{})
+
+	db.AutoMigrate()
 	DB = db
 }

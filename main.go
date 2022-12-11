@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"relationship/config"
-	student "relationship/services/one-to-one/service"
+	student "relationship/services/belongs-to/services"
 )
 
 func main() {

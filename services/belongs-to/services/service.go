@@ -2,7 +2,7 @@ package manytomany
 
 import (
 	"relationship/config"
-	models "relationship/services/one-to-one/models"
+	models "relationship/services/belongs-to/models"
 )
 
 func CreateData() {
