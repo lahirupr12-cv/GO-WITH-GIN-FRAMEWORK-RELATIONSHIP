@@ -9,11 +9,13 @@ import "gorm.io/gorm"
 
 type Customer struct {
 	gorm.Model
-	CreditCard CreditCard
+	Name       string
+	CreditCard CreditCard `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;polymorphic:Owner"`
 }
 
 type CreditCard struct {
 	gorm.Model
-	Number     string
-	CustomerID uint
+	Number    string
+	OwnerID   uint
+	OwnerType string
 }

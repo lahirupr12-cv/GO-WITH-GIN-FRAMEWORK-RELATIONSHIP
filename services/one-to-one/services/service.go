@@ -11,6 +11,7 @@ func CreateData() {
 	}
 
 	cus := models.Customer{
+		Name:       "Lahiru",
 		CreditCard: card,
 	}
 
