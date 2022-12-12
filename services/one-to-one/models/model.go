@@ -7,6 +7,9 @@ import "gorm.io/gorm"
 	In short hasOne and belongsTo are inverses of one another - if one record belongTo the other, the other hasOne of the first.
 */
 
+/*
+	For example, if your application includes users and credit cards, and each user can only have one credit card.
+*/
 type Customer struct {
 	gorm.Model
 	Name       string
