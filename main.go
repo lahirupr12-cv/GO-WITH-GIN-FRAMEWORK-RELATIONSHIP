@@ -6,6 +6,7 @@ import (
 
 	student "relationship/services/belongs-to/services"
 	customer "relationship/services/one-to-one/services"
+	user "relationship/services/one-to-many/services"
 )
 
 func main() {
@@ -18,5 +19,8 @@ func main() {
 
 	//one to one relationship
 	customer.CreateData()
+
+	//one to many relationship
+	user.CreateData()
 
 }
