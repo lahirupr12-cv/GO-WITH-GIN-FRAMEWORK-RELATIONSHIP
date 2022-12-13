@@ -3,7 +3,7 @@ package models
 import "gorm.io/gorm"
 
 /*
-	For example, if your application includes users and credit card, and each user can have many credit cards.
+	For example, if your application includes Book and Pages, and each book can have many pages.
 */
 
 type Book struct {
