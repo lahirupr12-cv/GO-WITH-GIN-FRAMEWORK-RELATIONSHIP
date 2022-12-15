@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 	student "relationship/services/belongs-to/models"
+	class "relationship/services/many-to-many/models"
 	club "relationship/services/many-to-many/models"
 	company "relationship/services/one-to-many/models"
 	card "relationship/services/one-to-one/models"
@@ -54,6 +55,10 @@ func Connection() {
 	//many to many relationship normal
 	db.AutoMigrate(&club.Club{})
 	db.AutoMigrate(&club.Members{})
+
+	//many to many relationship backreference
+	db.AutoMigrate(&class.Class{})
+	db.AutoMigrate(&club.Student{})
 
 	DB = db
 }

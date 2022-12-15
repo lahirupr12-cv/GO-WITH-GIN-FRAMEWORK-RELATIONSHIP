@@ -3,14 +3,14 @@ package models
 import "gorm.io/gorm"
 
 // User has and belongs to many languages, use `user_languages` as join table
-type PrivateClass struct {
+type Class struct {
 	gorm.Model
-	Name      string
-	Languages []*Students `gorm:"many2many:class_studentes;"`
+	Name    string
+	Student []Student `gorm:"many2many:student_classes;"`
 }
 
-type Students struct {
+type Student struct {
 	gorm.Model
 	Name  string
-	Users []*PrivateClass `gorm:"many2many:class_studentes;"`
+	Class []Class `gorm:"many2many:student_classes;"`
 }
